@@ -24,9 +24,9 @@ void main() {
 		cout << "\n";
 		cin >> var_number;
 
-		int A = (var_number/100)% 10;
-		int B = (var_number/10)%10;
-		int C = var_number%10;
+		int ones_digit = (var_number/100)% 10;
+		int tens_digit = (var_number/10)%10;
+		int hundreds_digit = var_number%10;
 		
 		if (var_number < 1000) {
 
@@ -36,20 +36,20 @@ void main() {
 			cout << "\n";
 		}
 	
-		if (C > B) {
-			if (B > A) {
-				cout << "It is ascending.";
+		if (hundreds_digit > tens_digit) {
+			if (tens_digit > ones_digit) {
+				cout << "The number " << var_number <<" is ascending.";
 				cout << "\n";
 			}
 		}
-			else if (A > B) {
-				if (B > C)
-					cout << "it is decending.";
+			else if (ones_digit > tens_digit) {
+				if (tens_digit > hundreds_digit)
+					cout << "The Number " << var_number <<" is descending";
 				cout << "\n";
 			}
 
 			else {
-				cout << "it is neither.";
+				cout << "The number "<< var_number << " is neither.";
 				cout << "\n";
 			}
 
